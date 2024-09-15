@@ -1,8 +1,9 @@
 const objectivesData = [
-    { id: 1, goal: "Objetivo 1", target: 500, progress: 250, compliance: 50 },
-    { id: 2, goal: "Objetivo 2", target: 1000000, progress: 50000, compliance: 5 },
-    { id: 3, goal: "Objetivo 3", target: 1000, progress: 900, compliance: 90 },
-    { id: 4, goal: "Objetivo 4", target: 150000, progress: 150000, compliance: 100 }
+    { id: 1, goal: "Make Violins smaller", target: 500, progress: 250, compliance: 50 },
+    { id: 2, goal: "Get rid of Termites", target: 1000000, progress: 50000, compliance: 5 },
+    { id: 3, goal: "Hire Steve Buscemi", target: 1000, progress: 700, compliance: 70 },
+    { id: 4, goal: "Kill Santa Clause", target: 150000, progress: 150000, compliance: 100 },
+    { id: 5, goal: "Make the violins actually work", target: 150000, progress: 15, compliance: 1 }
   ];
   
   const getStatusColor = (compliance) => {
@@ -14,16 +15,16 @@ const objectivesData = [
   const StrategicObjectives = () => {
     return (
       <section className="p-4">
-        <h2 className="text-2xl font-bold mb-4">3. Objetivos Estratégicos</h2>
+        <h2 className="text-2xl font-bold mb-4">3. Strategic Objectives</h2>
         <table className="min-w-full table-auto border-collapse border border-gray-300">
           <thead>
             <tr>
-              <th className="border p-2">Código</th>
-              <th className="border p-2">Objetivo</th>
-              <th className="border p-2">Meta</th>
-              <th className="border p-2">Avance</th>
-              <th className="border p-2">Cumplimiento</th>
-              <th className="border p-2">Estado</th>
+              <th className="border p-2">Code</th>
+              <th className="border p-2">Objective</th>
+              <th className="border p-2">Goal</th>
+              <th className="border p-2">Progress</th>
+              <th className="border p-2">Acomplisment</th>
+              <th className="border p-2">State</th>
             </tr>
           </thead>
           <tbody>
@@ -35,7 +36,7 @@ const objectivesData = [
                 <td className="border p-2">${obj.progress.toLocaleString()}</td>
                 <td className="border p-2">{obj.compliance}%</td>
                 <td className={`border p-2 ${getStatusColor(obj.compliance)}`}>
-                  {obj.compliance <= 35 ? "Crítico" : obj.compliance <= 75 ? "Aceptable" : "Exitoso"}
+                  {obj.compliance <= 35 ? "Critical" : obj.compliance <= 75 ? "Acceptable" : "Success"}
                 </td>
               </tr>
             ))}

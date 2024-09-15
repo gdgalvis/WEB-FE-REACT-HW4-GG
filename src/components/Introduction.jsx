@@ -1,8 +1,8 @@
 const Introduction = () => {
     return (
       <section className="p-4">
-        <h2 className="text-2xl font-bold mb-2">Introducción</h2>
-        <p>
+        <h2 className="text-2xl font-bold mb-2">Introduction</h2>
+        <p className="text-left">
         In today's highly competitive and niche-driven market, 
         businesses are increasingly focusing on unique, 
         emotionally resonant products that capture the imagination of their target audience. 
